@@ -70,3 +70,21 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Gemas para la autenticación de usuarios y creación de cuentas
+gem 'devise'
+
+# Gema para generar datos de prueba
+gem 'faker'
+
+# Gema para gestionar variables de entorno en el despliegue
+gem 'figaro'
+
+# Gema para conectar con Amazon S3
+gem 'aws-sdk-s3'
+
+# Gema para documentar
+gem 'annotate' 
+
+# `Gema para administrar roles `
+gem 'cancancan'
