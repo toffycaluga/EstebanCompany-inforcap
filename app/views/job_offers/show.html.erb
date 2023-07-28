@@ -15,7 +15,15 @@
     </div>
         
     <% else %>
+
+      <% if @job_offer.job_applications.exists?(user_id: current_user.id) %>
+        <strong>Ya has aplicado a este trabajo</strong><br>
+      <% else %>
+       
        <%= button_to "Aplicar a este trabajo", job_offer_job_aplications_path(@job_offer), method: :post, class: "btn btn-primary" %>
+       
+      <% end %>
+
         <%= link_to "Back to job offers", job_offers_path %>
       </div>
 <% end %>
