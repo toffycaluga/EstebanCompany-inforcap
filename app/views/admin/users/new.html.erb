@@ -1,0 +1,32 @@
+
+<%= form_for @user, url: admin_users_path do |f| %>
+<div class="field">
+
+  <%= f.label :email %><br>
+  <%= f.email_field :email %> 
+</div>
+<div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "email" %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_picture %> <br>
+    <%= f.file_field :profile_picture %>
+  </div>
+  <div class="field">
+
+  <%= f.label :password %><br>
+    
+  <%= f.password_field :password %>
+  </div>
+  <sdiv class="field">
+
+  <%= f.label :password_confirmation %><br>
+  <%= f.password_field :password_confirmation %><br>
+  </sdiv>
+
+  <%= f.label :admin %><br>
+  <%= f.check_box :admin %><br>
+
+  <%= f.submit 'Registrar usuario' %>
+<% end %>

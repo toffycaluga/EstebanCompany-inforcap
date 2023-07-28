@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'users/new'
+    get 'users/create'
+  end
   get 'home/index'
   resources :job_offers
   devise_for :users, controllers: { registrations: 'users/registrations' }
+
+  namespace :admin do
+    resources :users, only: [:new, :create]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
