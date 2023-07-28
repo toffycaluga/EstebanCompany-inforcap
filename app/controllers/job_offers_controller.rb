@@ -15,7 +15,7 @@ end
 
   # GET /job_offers/new
   def new
-    @job_offer = JobOffer.new
+    @job_offer = current_user.job_offers.build
   end
 
   # GET /job_offers/1/edit
@@ -24,7 +24,7 @@ end
 
   # POST /job_offers or /job_offers.json
   def create
-    @job_offer = JobOffer.new(job_offer_params)
+    @job_offer = current_user.job_offers.build(job_offer_params)
 
     respond_to do |format|
       if @job_offer.save

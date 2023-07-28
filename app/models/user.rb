@@ -26,4 +26,5 @@ class User < ApplicationRecord
   has_one_attached :profile_picture
   # Relaciones a muchos
   has_many :job_applications
+  has_many :job_offers
 end
