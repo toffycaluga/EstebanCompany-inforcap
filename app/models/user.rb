@@ -19,7 +19,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  # Validaciones
   validates :name, presence: true
+  
+  # relacionando foto de perfil para usuario
   has_one_attached :profile_picture
+  # Relaciones a muchos
   has_many :job_applications
 end
