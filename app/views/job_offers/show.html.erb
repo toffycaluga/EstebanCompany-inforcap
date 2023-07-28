@@ -2,9 +2,22 @@
 
 <%= render @job_offer %>
 
-<div>
-  <%= link_to "Edit this job offer", edit_job_offer_path(@job_offer) %> |
-  <%= link_to "Back to job offers", job_offers_path %>
 
-  <%= button_to "Destroy this job offer", @job_offer, method: :delete %>
-</div>
+
+
+<% if current_user.admin? %>
+  <div>
+    <div>
+      <%= link_to "Back to job offers", job_offers_path %>
+      <%= link_to "Edit this job offer", edit_job_offer_path(@job_offer) %> |
+
+      <%= button_to "Destroy this job offer", @job_offer, method: :delete %>
+    </div>
+        
+    <% else %>
+       <%= button_to "Aplicar a este trabajo", job_offer_job_aplications_path(@job_offer), method: :post, class: "btn btn-primary" %>
+        <%= link_to "Back to job offers", job_offers_path %>
+      </div>
+<% end %>
+
+
