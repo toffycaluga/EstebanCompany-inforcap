@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get 'users/new'
     get 'users/create'
   end
+  resources :job_aplications, only: :index
   get 'home/index'
   resources :job_offers do
     resources :job_aplications, only: :create
