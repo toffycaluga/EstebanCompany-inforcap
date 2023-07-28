@@ -1,6 +1,9 @@
 class JobOffersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_job_offer, only: %i[ show edit update destroy ]
-
+rescue_from CanCan::AccessDenied do |exception|
+  redirect_to root_url, alert: "accesos denegado"
+end
   # GET /job_offers or /job_offers.json
   def index
     @job_offers = JobOffer.all

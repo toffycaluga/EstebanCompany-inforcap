@@ -35,7 +35,7 @@ class Ability
         if user.admin?
           can :manage, :all
         else
-          can :read, Job_offer
+          can :read, JobOffer
         end
     
   end
