@@ -1,6 +1,4 @@
-# Nombre de la Aplicación
-
-Descripción corta de la aplicación.
+# Esteban company
 
 ## Descripción
 
@@ -9,7 +7,7 @@ Esta aplicación es una plataforma interna para que los empleados de la empresa 
 ## Vistas de la app
 
 - Vistas Admin:
-  ![img](https://github.com/toffycaluga/EstebanCompany-inforcap/blob/main/app/assets/images/vista_admin_1.png)
+  ![img](https://github.com/toffycaluga/EstebanCompany-inforcap/blob/main/app/assets/images/vista_udmin_1.png)
 
 ---
 
