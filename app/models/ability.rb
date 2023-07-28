@@ -33,7 +33,9 @@ class Ability
      
         user ||= User.new # guest user (not logged in)
         if user.admin?
+          can :create, User
           can :manage, :all
+          can :manage, User 
         else
           can :read, JobOffer
         end
