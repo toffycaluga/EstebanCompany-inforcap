@@ -1,0 +1,17 @@
+
+<h1>Trabajos aplicados</h1>
+
+<% if @applied_jobs.any? %>
+  <ul>
+    <% @applied_jobs.each do |job_application| %>
+      <li>
+        <%= job_application.job_offer.title %>
+       
+        <%= link_to "show this job offer", job_offer_path(job_application.job_offer) %>
+     
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No has aplicado a ningún trabajo todavía.</p>
+<% end %>
