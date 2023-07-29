@@ -1,0 +1,6 @@
+# Add configuration values here, as shown below.
+#
+aws_access_key_id: tu_access_key_id
+aws_secret_access_key: tu_access_key_id
+aws_bucket_name: bucket_a_conectar
+aws_bucket_region: region_de_bucket
