@@ -19,6 +19,16 @@
         
       </ul>
       <div class="d-flex">
+        <p class="me-2">
+
+          <% if current_user.profile_picture.present? %>
+            <%= image_tag current_user.profile_picture,alt:"profile_picture",class:"profile_picture navbar-brand" %>
+          <% else %>
+            <i class="fa-solid fa-circle-user navbar-brand"></i>
+          <% end %> 
+
+          <%=current_user.name%>
+        </p>
         <% if user_signed_in? %>
             <%= button_to 'Cerrar sesion', destroy_user_session_path,method: :delete , class:"btn btn-outline-danger" %>
         <% else %>
