@@ -9,9 +9,18 @@
     <%= job_offer.description %>
   </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= job_offer.user_id %>
-  </p>
+  <% if @job_applications.present? %>
+    <h2>Postulaciones</h2>
+    <ul>
+      <% @job_applications.each do |application| %>
+        <li>
+          <%= application.user.email %> - <%= application.created_at %>
+          <!-- Agrega aquí más información relevante de la aplicación -->
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+
 
 </div>

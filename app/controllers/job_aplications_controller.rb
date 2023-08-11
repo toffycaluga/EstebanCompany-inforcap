@@ -27,7 +27,10 @@ class JobAplicationsController < ApplicationController
     end
 
     def index
-      @applied_jobs = current_user.job_applications.includes(:job_offer)
+      
+        @applied_jobs = current_user.job_applications.includes(:job_offer)
+      
+
     end
 
     private
