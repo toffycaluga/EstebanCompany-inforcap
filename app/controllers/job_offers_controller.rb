@@ -11,13 +11,17 @@ end
 
   # GET /job_offers/1 or /job_offers/1.json
   def show
+    @job_offer = JobOffer.find(params[:id])
+    if request.path_info == job_offer_path(@job_offer) # Verifica la ruta actual
+      @job_applications = @job_offer.job_applications
+    end  
   end
 
   # GET /job_offers/new
   def new
     @job_offer = current_user.job_offers.build
   end
-
+  
   # GET /job_offers/1/edit
   def edit
   end
